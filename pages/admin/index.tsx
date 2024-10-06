@@ -19,6 +19,15 @@ const AdminDashboard = () => {
     fetchPosts();
   }, []);
 
+  const handleDelete = async (id) => {
+    const response = await fetch(`/api/posts/${id}/delete`, {
+      method: 'DELETE',
+    });
+    if (response.ok) {
+      setPosts(posts.filter((post) => post.id !== id));
+    }
+  };
+
   return (
     <AdminLayout>
       <div className="flex justify-between items-center mb-4">
@@ -39,7 +48,7 @@ const AdminDashboard = () => {
                 <Link href={`/admin/posts/edit/${post.id}`}>
                   <Button>Edit</Button>
                 </Link>
-                <Button variant="destructive">Delete</Button>
+                <Button variant="destructive" onClick={() => handleDelete(post.id)}>Delete</Button>
               </div>
             </CardContent>
           </Card>

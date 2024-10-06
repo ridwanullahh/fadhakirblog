@@ -6,15 +6,15 @@ const pb = new PocketBase('https://fadhakir.pockethost.io');
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
-  if (req.method === 'PUT') {
+  if (req.method === 'DELETE') {
     try {
-      const record = await pb.collection('posts').update(id as string, req.body);
-      res.status(200).json(record);
+      await pb.collection('posts').delete(id as string);
+      res.status(204).end();
     } catch (error) {
-      res.status(500).json({ error: 'Failed to update post' });
+      res.status(500).json({ error: 'Failed to delete post' });
     }
   } else {
-    res.setHeader('Allow', ['PUT']);
+    res.setHeader('Allow', ['DELETE']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
