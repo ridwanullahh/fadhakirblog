@@ -1,5 +1,6 @@
 
 import ThemeToggleButton from '../components/ThemeToggleButton'
+import SearchComponent from '../components/SearchComponent'
 
 export default function Layout({ children }) {
   return (
@@ -7,7 +8,10 @@ export default function Layout({ children }) {
       <header className="p-4 bg-gray-200 dark:bg-gray-800">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-xl font-bold">My Blog</h1>
-          <ThemeToggleButton />
+          <div className="flex items-center space-x-4">
+            <SearchComponent />
+            <ThemeToggleButton />
+          </div>
         </div>
       </header>
       <main className="flex-grow container mx-auto p-4">
