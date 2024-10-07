@@ -13,6 +13,7 @@ export default function Home() {
           <a href="/category/Tech" className="text-lg">Tech</a>
           <a href="/category/Health" className="text-lg">Health</a>
           <a href="/category/Lifestyle" className="text-lg">Lifestyle</a>
+          <a href="/admin" className="text-lg">Admin</a>
           <Search />
           <ThemeToggler />
         </nav>
