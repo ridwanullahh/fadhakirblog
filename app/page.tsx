@@ -10,6 +10,9 @@ export default function Home() {
         <h1 className="text-2xl font-bold">Fadhakir Blog</h1>
         <nav className="flex items-center space-x-4">
           <a href="/posts" className="text-lg">Posts Archive</a>
+          <a href="/category/Tech" className="text-lg">Tech</a>
+          <a href="/category/Health" className="text-lg">Health</a>
+          <a href="/category/Lifestyle" className="text-lg">Lifestyle</a>
           <Search />
           <ThemeToggler />
         </nav>
