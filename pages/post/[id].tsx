@@ -28,18 +28,25 @@ const BlogPostPage = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <Card>
-        <CardHeader>
-          <CardTitle>{post.title}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          <div className="mt-4 flex space-x-4">
-            <Button>Share</Button>
-            <Button>Bookmark</Button>
-          </div>
-        </CardContent>
-      </Card>
+      <header className="mb-4">
+        <h1 className="text-3xl font-bold">{post.title}</h1>
+        <p className="text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
+      </header>
+      <article className="prose lg:prose-xl">
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
+      <footer className="mt-8 flex space-x-4">
+        <Button>Share</Button>
+        <Button>Bookmark</Button>
+        <div className="flex space-x-2">
+          <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer">
+            <img src="/icons/twitter.svg" alt="Share on Twitter" />
+          </a>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer">
+            <img src="/icons/facebook.svg" alt="Share on Facebook" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
