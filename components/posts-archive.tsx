@@ -74,7 +74,9 @@ export default function PostsArchive() {
         {posts.map((post) => (
           <Card key={post.id}>
             <CardHeader>
-              <CardTitle>{post.title}</CardTitle>
+              <CardTitle>
+                <a href={`/posts/${post.id}`}>{post.title}</a>
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <p>Category: {post.category}</p>
