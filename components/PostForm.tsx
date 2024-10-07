@@ -5,12 +5,16 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import AdminLayout from '@/layouts/AdminLayout';
+import dynamic from 'next/dynamic';
+
+const RichTextEditor = dynamic(() => import('@/components/RichTextEditor'), { ssr: false });
 
 const PostForm = ({ post }) => {
   const router = useRouter();
   const [title, setTitle] = useState(post ? post.title : '');
   const [content, setContent] = useState(post ? post.content : '');
   const [excerpt, setExcerpt] = useState(post ? post.excerpt : '');
+  const [isMarkdown, setIsMarkdown] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,13 +64,28 @@ const PostForm = ({ post }) => {
           <label htmlFor="content" className="block text-sm font-medium text-gray-700">
             Content
           </label>
-          <Textarea
-            id="content"
-            name="content"
-            required
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          />
+          <div className="flex items-center mb-2">
+            <label className="mr-2">Markdown</label>
+            <input
+              type="checkbox"
+              checked={isMarkdown}
+              onChange={() => setIsMarkdown(!isMarkdown)}
+            />
+          </div>
+          {isMarkdown ? (
+            <Textarea
+              id="content"
+              name="content"
+              required
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+          ) : (
+            <RichTextEditor
+              value={content}
+              onChange={(value) => setContent(value)}
+            />
+          )}
         </div>
         <Button type="submit">{post ? 'Update' : 'Create'} Post</Button>
       </form>
