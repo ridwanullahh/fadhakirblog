@@ -1,6 +1,7 @@
 
 import ThemeToggler from '../components/theme-toggler'
 import Search from '../components/search'
+import HomePage from '../components/home-page'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         </div>
       </header>
       <main>
-        {/* Other components will go here */}
+        <HomePage />
       </main>
     </div>
   )
