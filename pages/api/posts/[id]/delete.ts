@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         throw new Error(error.message);
       }
       res.status(204).end();
-    } catch (error) {
+    } catch {
       res.status(500).json({ error: 'Failed to delete post' });
     }
   } else {

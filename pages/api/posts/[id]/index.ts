@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
       const result = await response.json();
       res.status(200).json(result.record);
-    } catch (error) {
+    } catch {
       res.status(500).json({ error: 'Failed to update post' });
     }
   } else {
