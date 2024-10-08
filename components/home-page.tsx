@@ -27,22 +27,26 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto p-4">
-      <section className="mb-8">
-        <h2 className="text-3xl font-bold mb-4">Featured Posts</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {featuredPosts.map((post) => (
-            <Card key={post.id}>
-              <CardHeader>
-                <CardTitle>{post.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{post.description}</p>
-                <Button className="mt-4">Read More</Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+<section className="mb-8">
+  <h2 className="text-3xl font-bold mb-4">Featured Posts</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {featuredPosts.map((post) => (
+      <Card key={post.id}>
+        <CardHeader>
+          <CardTitle>{post.title}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p>{post.description}</p>
+          <Link href={`/post/${post.id}`} legacyBehavior>
+            <a className="block mt-4">
+              <Button>Read More</Button>
+            </a>
+          </Link>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</section>
       <section>
         <h2 className="text-3xl font-bold mb-4">Recent Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
