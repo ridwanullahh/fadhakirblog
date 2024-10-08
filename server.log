@@ -1,0 +1,62 @@
+
+> web-app@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
+ ⚠ Port 3002 is in use, trying 3003 instead.
+  ▲ Next.js 14.2.13
+  - Local:        http://localhost:3003
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 3.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 2.6s (553 modules)
+ ✓ Compiled in 333ms (553 modules)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check your code at _app.tsx:9.
+    at MyApp (webpack-internal:///./pages/_app.tsx:16:18)
+    at StyleRegistry (/home/user/fadhakirblog/node_modules/styled-jsx/dist/index/index.js:449:36)
+    at eU (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:8:20468)
+    at eH (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:1788)
+    at eJ (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:3091)
+    at div
+    at e9 (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:26:761)
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6054:9)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderNode (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6270:12)
+    at renderChildrenArray (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6222:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6152:7)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+ ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6054:9)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderNode (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6270:12)
+    at renderChildrenArray (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6222:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6152:7)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14) {
+  page: '/'
+}
+ ✓ Compiled /_error in 215ms (555 modules)
+ HEAD / 500 in 3567ms
