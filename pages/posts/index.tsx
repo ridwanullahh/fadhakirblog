@@ -5,7 +5,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Input } from '@/components/ui/input';
 
 const PostsArchivePage = () => {
-  const [posts, setPosts] = useState([]);
+interface Post {
+  id: string;
+  title: string;
+  date: string;
+  excerpt: string;
+}
+
+const [posts, setPosts] = useState<Post[]>([]);
   const [filter, setFilter] = useState('');
   const [sort, setSort] = useState('date');
 
@@ -21,13 +28,14 @@ const PostsArchivePage = () => {
   }, []);
 
   const filteredPosts = posts.filter(post => post.title.includes(filter));
-  const sortedPosts = filteredPosts.sort((a, b) => {
-    if (sort === 'date') {
-      return new Date(b.date) - new Date(a.date);
-    } else if (sort === 'title') {
-      return a.title.localeCompare(b.title);
-    }
-  });
+const sortedPosts = filteredPosts.sort((a, b) => {
+  if (sort === 'date') {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  } else if (sort === 'title') {
+    return a.title.localeCompare(b.title);
+  }
+  return 0; // Default return value
+});
 
   return (
     <div className="container mx-auto p-4">

@@ -7,7 +7,14 @@ import Image from 'next/image';
 const BlogPostPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const [post, setPost] = useState(null);
+interface Post {
+  id: string;
+  title: string;
+  date: string;
+  content: string;
+}
+
+const [post, setPost] = useState<Post | null>(null);
 
   useEffect(() => {
     if (id) {
