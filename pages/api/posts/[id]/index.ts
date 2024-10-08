@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(500).json({ error: 'Failed to update post' });
     }
   } else {
-    res.setHeader('Allow', ['PUT', 'DELETE']);
+    res.setHeader('Allow', ['PUT']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
