@@ -27,7 +27,7 @@ const PostForm: React.FC<PostFormProps> = ({ post }) => {
   const [excerpt, setExcerpt] = useState(post ? post.excerpt : '');
   const [isMarkdown, setIsMarkdown] = useState(false);
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const method = post ? 'PUT' : 'POST';
     const url = post ? `/api/posts/${post.id}` : '/api/posts';
