@@ -94,7 +94,7 @@ const PostForm: React.FC<PostFormProps> = ({ post }) => {
           ) : (
             <RichTextEditor
               value={content}
-              onChange={(value) => setContent(value)}
+  onChange={(value: string) => setContent(value)}
             />
           )}
         </div>
