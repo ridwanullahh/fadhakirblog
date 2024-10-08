@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
 import { Button } from '@/components/ui/button';
 
 const BlogPostPage = () => {
@@ -39,12 +39,12 @@ const BlogPostPage = () => {
         <Button>Share</Button>
         <Button>Bookmark</Button>
         <div className="flex space-x-2">
-          <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer">
-            <img src="/icons/twitter.svg" alt="Share on Twitter" />
-          </a>
-          <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer">
-            <img src="/icons/facebook.svg" alt="Share on Facebook" />
-          </a>
+<a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer">
+  <Image src="/icons/twitter.svg" alt="Share on Twitter" width={24} height={24} />
+</a>
+<a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer">
+  <Image src="/icons/facebook.svg" alt="Share on Facebook" width={24} height={24} />
+</a>
         </div>
       </footer>
     </div>

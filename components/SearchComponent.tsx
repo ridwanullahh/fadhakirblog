@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const SearchComponent = () => {
-  const { query, setQuery, search } = useSearch();
+  const { query, search } = useSearch();
   const [inputValue, setInputValue] = useState(query);
   const [filter, setFilter] = useState('title');
 

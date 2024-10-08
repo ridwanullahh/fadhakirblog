@@ -2,6 +2,7 @@
 import ThemeToggler from '../components/theme-toggler'
 import Search from '../components/search'
 import HomePage from '../components/home-page'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -9,11 +10,11 @@ export default function Home() {
       <header className="flex justify-between items-center py-4">
         <h1 className="text-2xl font-bold">Fadhakir Blog</h1>
         <nav className="flex items-center space-x-4">
-          <a href="/posts" className="text-lg">Posts Archive</a>
-          <a href="/category/Tech" className="text-lg">Tech</a>
-          <a href="/category/Health" className="text-lg">Health</a>
-          <a href="/category/Lifestyle" className="text-lg">Lifestyle</a>
-          <a href="/admin" className="text-lg">Admin</a>
+<Link href="/posts"><a className="text-lg">Posts Archive</a></Link>
+<Link href="/category/Tech"><a className="text-lg">Tech</a></Link>
+<Link href="/category/Health"><a className="text-lg">Health</a></Link>
+<Link href="/category/Lifestyle"><a className="text-lg">Lifestyle</a></Link>
+<Link href="/admin"><a className="text-lg">Admin</a></Link>
           <Search />
           <ThemeToggler />
         </nav>
