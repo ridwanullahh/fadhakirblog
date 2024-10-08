@@ -56,7 +56,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             type="text"
             required
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
           />
         </div>
         <div>
