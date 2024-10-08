@@ -89,7 +89,7 @@ onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setExcerpt(e.target.val
               name="content"
               required
               value={content}
-              onChange={(e) => setContent(e.target.value)}
+onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
             />
           ) : (
             <RichTextEditor
