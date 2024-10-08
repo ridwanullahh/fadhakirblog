@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
        const query = 'DELETE FROM "bseYTIApw5hBXcSbm9D"."blog_posts" WHERE __id = $1';
       const values = [id];
-      await client.query(query, values);
+      await db.query(query, values);
       res.status(204).end();
     } catch (error) {
       res.status(500).json({ error: 'Failed to delete post' });

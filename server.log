@@ -4,59 +4,45 @@
 
  ⚠ Port 3000 is in use, trying 3001 instead.
  ⚠ Port 3001 is in use, trying 3002 instead.
- ⚠ Port 3002 is in use, trying 3003 instead.
   ▲ Next.js 14.2.13
-  - Local:        http://localhost:3003
+  - Local:        http://localhost:3002
   - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 3.2s
- ○ Compiling / ...
- ✓ Compiled / in 2.6s (553 modules)
- ✓ Compiled in 333ms (553 modules)
-Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
-
-Check your code at _app.tsx:9.
-    at MyApp (webpack-internal:///./pages/_app.tsx:16:18)
-    at StyleRegistry (/home/user/fadhakirblog/node_modules/styled-jsx/dist/index/index.js:449:36)
-    at eU (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:8:20468)
-    at eH (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:1788)
-    at eJ (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:3091)
-    at div
-    at e9 (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:26:761)
-Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
-    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6054:9)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
-    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
-    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
-    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
-    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
-    at renderNode (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6270:12)
-    at renderChildrenArray (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6222:7)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6152:7)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
- ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
-    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6054:9)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
-    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
-    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
-    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
-    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
-    at renderNode (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6270:12)
-    at renderChildrenArray (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6222:7)
-    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6152:7)
-    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14) {
-  page: '/'
+ ✓ Ready in 1745ms
+ ✓ Compiled /api/posts in 277ms (69 modules)
+Error creating post: error: permission denied for table blog_posts
+    at /home/user/fadhakirblog/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async handler (webpack-internal:///(api)/./pages/api/posts/index.ts:18:28)
+    at async K (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:598:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/home/user/fadhakirblog/node_modules/next/dist/server/base-server.js:810:17)
+    at async /home/user/fadhakirblog/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/user/fadhakirblog/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/user/fadhakirblog/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:350:24)
+    at async requestHandlerImpl (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:374:13)
+    at async Server.requestListener (/home/user/fadhakirblog/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  length: 98,
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '3650',
+  routine: 'aclcheck_error'
 }
- ✓ Compiled /_error in 215ms (555 modules)
- HEAD / 500 in 3567ms
+ POST /api/posts 500 in 834ms
