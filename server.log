@@ -14,8 +14,8 @@
 Error creating post: error: permission denied for table blog_posts
     at /home/user/fadhakirblog/node_modules/pg-pool/index.js:45:11
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async handler (webpack-internal:///(api)/./pages/api/posts/index.ts:18:28)
-    at async K (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async handler (webpack-internal:///(api)/./pages/api/posts/index.ts:18: ✓ Compiled in 132ms (52 modules)
+kirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
     at async U.render (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
     at async DevServer.runApi (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:598:9)
     at async NextNodeServer.handleCatchallRenderRequest (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:269:37)
@@ -46,3 +46,4 @@ Error creating post: error: permission denied for table blog_posts
   routine: 'aclcheck_error'
 }
  POST /api/posts 500 in 834ms
+ ✓ Compiled in 142ms (52 modules)
