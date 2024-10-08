@@ -6,10 +6,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.query;
   if (req.method === 'DELETE') {
     try {
-      const response = await fetch(`https://app.teable.io/api/table/tblwt4j33C0EwVySweN/record/${id}`, {
+      const response = await fetch(`https://app.teable.io/api/table/${process.env.TEABLE_TABLE_ID}/record/${id}`, {
         method: 'DELETE',
         headers: {
-          'Authorization': 'Bearer teable_accu6zdOIvs6FaWYaKt_dBtNWpw9DTd1y4VJQh5yj+IL/G6uDxkTLsV+ENum56Y='
+          'Authorization': `Bearer ${process.env.TEABLE_API_TOKEN}`,
         }
       });
       if (response.ok) {
