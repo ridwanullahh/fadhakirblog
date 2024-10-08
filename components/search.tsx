@@ -8,7 +8,13 @@ import { SearchIcon } from "lucide-react";
 
 export default function Search() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
+interface SearchResult {
+  id: number;
+  title: string;
+  description: string;
+}
+
+const [results, setResults] = useState<SearchResult[]>([]);
 
   const handleSearch = async () => {
     if (query.trim() === "") return;
@@ -28,7 +34,7 @@ export default function Search() {
           type="text"
           placeholder="Search..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
         />
         <Button onClick={handleSearch} size="icon">
           <SearchIcon className="h-4 w-4" />

@@ -6,7 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const CategoryPage = () => {
   const router = useRouter();
   const { category } = router.query;
-  const [posts, setPosts] = useState([]);
+interface Post {
+  id: string;
+  title: string;
+  excerpt: string;
+}
+
+const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     if (category) {

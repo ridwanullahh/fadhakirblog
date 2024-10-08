@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="p-4 bg-gray-200 dark:bg-gray-800">

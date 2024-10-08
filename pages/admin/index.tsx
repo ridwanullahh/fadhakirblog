@@ -8,7 +8,13 @@ import AdminLayout from '@/layouts/AdminLayout';
 import withAuth from '../../lib/withAuth';
 
 const AdminDashboard = () => {
-  const [posts, setPosts] = useState([]);
+interface Post {
+  id: string;
+  title: string;
+  excerpt: string;
+}
+
+const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -21,7 +27,7 @@ const AdminDashboard = () => {
     fetchPosts();
   }, []);
 
-  const handleDelete = async (id) => {
+const handleDelete = async (id: string) => {
     const response = await fetch(`/api/posts/${id}/delete`, {
       method: 'DELETE',
     });
