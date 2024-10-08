@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import AdminLayout from '@/layouts/AdminLayout';
 
+import withAuth from '../../lib/withAuth';
+
 const AdminDashboard = () => {
   const [posts, setPosts] = useState([]);
 
@@ -58,4 +60,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default withAuth(AdminDashboard);
