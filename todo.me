@@ -1,0 +1,51 @@
+
+# TODO List
+
+## Current Status
+
+1. Home Page (`index.tsx`)
+   - Includes `ThemeToggler`, `Search`, and `HomePage` components.
+   - Header with links to Posts Archive, various categories, and Admin page.
+
+2. Admin Dashboard (`admin/index.tsx`)
+   - Fetches and displays posts.
+   - Options to create, edit, and delete posts.
+
+3. Post Management (`admin/posts`)
+   - `create.tsx`: Renders `PostForm` for creating new posts.
+   - `edit/[id].tsx`: Fetches post data and renders `PostForm` for editing posts.
+
+4. API Endpoints (`api/posts`)
+   - `index.ts`: Handles creation of new posts.
+   - `[id]/index.ts`: Handles updating of individual posts.
+   - `[id]/delete.ts`: Handles deletion of individual posts.
+
+## Next Steps
+
+1. Database Setup
+   - Connect to the Teable.io PostgreSQL database.
+   - Import the Blog Post 2 table and create necessary dummy data.
+   - Populate the table using the provided API methods.
+
+2. Frontend Pages
+   - Ensure the following pages are functional and modern:
+     - Global Theme Toggling
+     - Global Ajax Powered Search
+     - Home Page
+     - Posts Archive with Filtering and Sorting
+     - Categories Listing Page
+     - Blog Posts Page
+     - Minimal Modern Footer
+     - Mobile-Friendly Menus
+
+3. Admin Area
+   - Ensure the Admin CRUD Area is fully functional with authentication and roles & permissions using Auth0.
+   - Implement any missing features in the admin management editor.
+
+4. Testing and Validation
+   - Ensure all aspects of the project work with the database.
+   - Test the application thoroughly to ensure it works perfectly without errors.
+   - Fix any errors encountered during testing.
+
+5. Commit and Push
+   - Commit and push changes to the GitHub repository after every single change.
