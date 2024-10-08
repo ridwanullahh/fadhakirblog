@@ -27,7 +27,7 @@ const PostForm: React.FC<PostFormProps> = ({ post }) => {
   const [excerpt, setExcerpt] = useState(post ? post.excerpt : '');
   const [isMarkdown, setIsMarkdown] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const method = post ? 'PUT' : 'POST';
     const url = post ? `/api/posts/${post.id}` : '/api/posts';
@@ -56,7 +56,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             type="text"
             required
             value={title}
-onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
           />
         </div>
         <div>
@@ -68,7 +68,7 @@ onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
             name="excerpt"
             required
             value={excerpt}
-onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setExcerpt(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setExcerpt(e.target.value)}
           />
         </div>
         <div>
@@ -89,7 +89,7 @@ onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setExcerpt(e.target.val
               name="content"
               required
               value={content}
-onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
             />
           ) : (
             <RichTextEditor
