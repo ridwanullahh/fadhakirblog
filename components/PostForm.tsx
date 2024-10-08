@@ -9,7 +9,18 @@ import dynamic from 'next/dynamic';
 
 const RichTextEditor = dynamic(() => import('../components/RichTextEditor'), { ssr: false });
 
-const PostForm = ({ post }) => {
+interface Post {
+  id?: string;
+  title: string;
+  content: string;
+  excerpt: string;
+}
+
+interface PostFormProps {
+  post?: Post;
+}
+
+const PostForm: React.FC<PostFormProps> = ({ post }) => {
   const router = useRouter();
   const [title, setTitle] = useState(post ? post.title : '');
   const [content, setContent] = useState(post ? post.content : '');
