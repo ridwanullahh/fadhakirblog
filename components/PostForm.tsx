@@ -68,7 +68,7 @@ onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
             name="excerpt"
             required
             value={excerpt}
-            onChange={(e) => setExcerpt(e.target.value)}
+onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setExcerpt(e.target.value)}
           />
         </div>
         <div>
