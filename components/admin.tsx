@@ -24,7 +24,7 @@ export default function Admin() {
     setContent("");
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: number) => {
     setPosts(posts.filter(post => post.id !== id));
   };
 
@@ -36,13 +36,13 @@ export default function Admin() {
           type="text"
           placeholder="Title"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
           className="mb-2"
         />
         <Textarea
           placeholder="Content"
           value={content}
-          onChange={(e) => setContent(e.target.value)}
+           onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
           className="mb-2"
         />
         <Button onClick={handleCreate}>Create Post</Button>

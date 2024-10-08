@@ -17,7 +17,15 @@ const mockPost = {
 export default function BlogPost() {
   const router = useRouter();
   const { id } = router.query;
-  const [post, setPost] = useState(null);
+  interface Post {
+    id: number;
+    title: string;
+    content: string;
+    date: string;
+    author: string;
+  }
+
+  const [post, setPost] = useState<Post | null>(null);
 
   useEffect(() => {
     // Simulate fetching data from an API

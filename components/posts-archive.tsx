@@ -14,7 +14,14 @@ const mockPosts = [
 ];
 
 export default function PostsArchive() {
-  const [posts, setPosts] = useState([]);
+  interface Post {
+    id: number;
+    title: string;
+    category: string;
+    date: string;
+  }
+
+  const [posts, setPosts] = useState<Post[]>([]);
   const [category, setCategory] = useState("");
   const [sort, setSort] = useState("date");
   const [search, setSearch] = useState("");
@@ -32,7 +39,7 @@ export default function PostsArchive() {
     }
 
     if (sort === "date") {
-      filteredPosts = filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+       filteredPosts = filteredPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     } else if (sort === "title") {
       filteredPosts = filteredPosts.sort((a, b) => a.title.localeCompare(b.title));
     }
@@ -47,7 +54,7 @@ export default function PostsArchive() {
           type="text"
           placeholder="Search posts..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
         />
         <Select onValueChange={(value) => setCategory(value)}>
           <SelectTrigger>

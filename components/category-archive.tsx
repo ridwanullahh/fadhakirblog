@@ -15,7 +15,14 @@ const mockPosts = [
 export default function CategoryArchive() {
   const router = useRouter();
   const { category } = router.query;
-  const [posts, setPosts] = useState([]);
+  interface Post {
+    id: number;
+    title: string;
+    category: string;
+    date: string;
+  }
+
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     // Simulate fetching data from an API

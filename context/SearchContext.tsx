@@ -6,7 +6,7 @@ interface SearchContextProps {
   setQuery: (query: string) => void;
   results: any[];
   setResults: (results: any[]) => void;
-  search: (query: string) => void;
+  search: (query: string, filter: string) => void;
 }
 
 const SearchContext = createContext<SearchContextProps | undefined>(undefined);
@@ -15,10 +15,10 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
   const [query, setQuery] = useState<string>('');
   const [results, setResults] = useState<any[]>([]);
 
-  const search = async (query: string) => {
+  const search = async (query: string, filter: string) => {
     setQuery(query);
     // Simulate an API call
-    const response = await fetch(`/api/search?q=${query}`);
+    const response = await fetch(`/api/search?q=${query}&filter=${filter}`);
     const data = await response.json();
     setResults(data);
   };

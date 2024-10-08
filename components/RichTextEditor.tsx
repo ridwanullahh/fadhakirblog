@@ -6,7 +6,12 @@ import ReactMarkdown from 'react-markdown';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
-const RichTextEditor = ({ value, onChange }) => {
+interface RichTextEditorProps {
+  value: string;
+  onChange: (value: string) => void;
+}
+
+const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
   const [isMarkdown, setIsMarkdown] = useState(false);
 
   const handleToggle = () => {

@@ -17,8 +17,14 @@ const mockRecentPosts = [
 ];
 
 export default function HomePage() {
-  const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [recentPosts, setRecentPosts] = useState([]);
+  interface Post {
+    id: number;
+    title: string;
+    description: string;
+  }
+
+  const [featuredPosts, setFeaturedPosts] = useState<Post[]>([]);
+  const [recentPosts, setRecentPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     // Simulate fetching data from an API

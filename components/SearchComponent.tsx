@@ -20,7 +20,7 @@ const SearchComponent = () => {
         type="text"
         placeholder="Search..."
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
       />
       <Select onValueChange={(value) => setFilter(value)}>
         <SelectTrigger>
