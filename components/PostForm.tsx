@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import AdminLayout from '@/layouts/AdminLayout';
 import dynamic from 'next/dynamic';
 
-const RichTextEditor = dynamic(() => import('@/components/RichTextEditor'), { ssr: false });
+const RichTextEditor = dynamic(() => import('../components/RichTextEditor'), { ssr: false });
 
 const PostForm = ({ post }) => {
   const router = useRouter();
