@@ -10,11 +10,11 @@ export default function Home() {
       <header className="flex justify-between items-center py-4">
         <h1 className="text-2xl font-bold">Fadhakir Blog</h1>
         <nav className="flex items-center space-x-4">
-<Link href="/posts"><a className="text-lg">Posts Archive</a></Link>
-<Link href="/category/Tech"><a className="text-lg">Tech</a></Link>
-<Link href="/category/Health"><a className="text-lg">Health</a></Link>
-<Link href="/category/Lifestyle"><a className="text-lg">Lifestyle</a></Link>
-<Link href="/admin"><a className="text-lg">Admin</a></Link>
+<Link href="/posts" legacyBehavior><a className="text-lg">Posts Archive</a></Link>
+<Link href="/category/Tech" legacyBehavior><a className="text-lg">Tech</a></Link>
+<Link href="/category/Health" legacyBehavior><a className="text-lg">Health</a></Link>
+<Link href="/category/Lifestyle" legacyBehavior><a className="text-lg">Lifestyle</a></Link>
+<Link href="/admin" legacyBehavior><a className="text-lg">Admin</a></Link>
           <Search />
           <ThemeToggler />
         </nav>
