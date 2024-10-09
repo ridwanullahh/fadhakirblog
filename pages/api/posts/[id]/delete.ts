@@ -1,12 +1,12 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import db from '../../../../lib/db';
+import { query as dbQuery } from '../../../../lib/db';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (req.method === 'DELETE') {
     try {
-      const result = await db.query('DELETE FROM posts WHERE id = $1 RETURNING *', [id]);
+       const result = await dbQuery('DELETE FROM posts WHERE id = $1 RETURNING *', [id]);
       if (result.rowCount && result.rowCount > 0) {
         res.status(204).end();
       } else {

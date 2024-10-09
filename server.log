@@ -1,15 +1,12 @@
 
-> web-app@0.1.0 dev
-> next dev
+> web-app@0.1.0 start
+> next start
 
- ⚠ Port 3000 is in use, trying 3001 instead.
   ▲ Next.js 14.2.13
-  - Local:        http://localhost:3001
-  - Environments: .env
+  - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 2.4s
- ○ Compiling / ...
- ✓ Compiled / in 3.6s (348 modules)
- ✓ Compiled in 345ms (348 modules)
- HEAD / 200 in 4128ms
+Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+    at setupFsCheck (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+    at async initialize (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:62:23)
+    at async Server.<anonymous> (/home/user/fadhakirblog/node_modules/next/dist/server/lib/start-server.js:249:36)

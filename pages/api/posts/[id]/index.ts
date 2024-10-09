@@ -1,12 +1,12 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import db from '../../../../lib/db';
+import { query as dbQuery } from '../../../../lib/db';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (req.method === 'GET') {
     try {
-      const result = await db.query('SELECT * FROM posts WHERE id = $1', [id]);
+       const result = await dbQuery('SELECT * FROM posts WHERE id = $1', [id]);
       if (result.rows.length > 0) {
         res.status(200).json(result.rows[0]);
       } else {
