@@ -6,3 +6,15 @@
   - Environments: .env
 
    Linting and checking validity of types ...
+Failed to compile.
+
+./pages/api/posts/[id]/delete.ts:7:3
+Type error: Object literal may only specify known properties, and 'databaseURL' does not exist in type 'XataApiClientOptions'.
+
+[0m [90m  5 |[39m [36mconst[39m xata [33m=[39m [36mnew[39m [33mXataApiClient[39m({[0m
+[0m [90m  6 |[39m   apiKey[33m:[39m process[33m.[39menv[33m.[39m[33mXATA_API_KEY[39m[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m  7 |[39m   databaseURL[33m:[39m process[33m.[39menv[33m.[39m[33mDATABASE_URL[39m[33m,[39m[0m
+[0m [90m    |[39m   [31m[1m^[22m[39m[0m
+[0m [90m  8 |[39m })[33m;[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36masync[39m [36mfunction[39m handler(req[33m:[39m [33mNextApiRequest[39m[33m,[39m res[33m:[39m [33mNextApiResponse[39m) {[0m

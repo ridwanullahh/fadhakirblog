@@ -1,19 +1,17 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Pool } from 'pg';
+import { XataApiClient } from '@xata.io/client';
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL_POSTGRES,
-  ssl: {
-    rejectUnauthorized: false
-  }
+const xata = new XataApiClient({
+  apiKey: process.env.XATA_API_KEY,
+  databaseURL: process.env.DATABASE_URL,
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (req.method === 'DELETE') {
     try {
-      const result = await pool.query('DELETE FROM posts WHERE id = $1 RETURNING *', [id]);
+      const result = await xata.db.query('DELETE FROM posts WHERE id = $1 RETURNING *', [id]);
       if (result.rowCount && result.rowCount > 0) {
         res.status(204).end();
       } else {

@@ -1,12 +1,10 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Pool } from 'pg';
+import { XataApiClient } from '@xata.io/client';
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL_POSTGRES,
-  ssl: {
-    rejectUnauthorized: false
-  }
+const xata = new XataApiClient({
+  apiKey: process.env.XATA_API_KEY,
+  databaseURL: process.env.DATABASE_URL,
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -14,11 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'PUT') {
     try {
       const { title, content, author, category, status, updated_at } = req.body;
-      const result = await pool.query(
+      const result = await xata.db.query(
         'UPDATE posts SET title = $1, content = $2, author = $3, category = $4, status = $5, updated_at = $6 WHERE id = $7 RETURNING *',
         [title, content, author, category, status, updated_at, id]
       );
-      res.status(200).json(result.rows[0]);
+      res.status(200).json(result);
     } catch (error) {
       console.error('Error updating post:', error);
       res.status(500).json({ error: 'Failed to update post' });
