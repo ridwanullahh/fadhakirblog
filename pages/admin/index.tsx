@@ -24,7 +24,11 @@ const [posts, setPosts] = useState<Post[]>([]);
           throw new Error('Failed to fetch posts');
         }
         const data = await response.json();
-        setPosts(data);
+        if (Array.isArray(data)) {
+          setPosts(data);
+        } else {
+          console.error('Unexpected data format:', data);
+        }
       } catch (error) {
         console.error('Error fetching posts:', error);
       }

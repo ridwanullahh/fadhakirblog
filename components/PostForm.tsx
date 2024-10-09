@@ -42,7 +42,12 @@ const PostForm: React.FC<PostFormProps> = ({ post }) => {
       if (!response.ok) {
         throw new Error('Failed to save post');
       }
-      router.push('/admin');
+      const data = await response.json();
+      if (data && data.id) {
+        router.push('/admin');
+      } else {
+        console.error('Unexpected data format:', data);
+      }
     } catch (error) {
       console.error('Error saving post:', error);
     }
