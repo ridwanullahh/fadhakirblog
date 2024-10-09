@@ -31,15 +31,20 @@ const PostForm: React.FC<PostFormProps> = ({ post }) => {
     e.preventDefault();
     const method = post ? 'PUT' : 'POST';
     const url = post ? `/api/posts/${post.id}` : '/api/posts';
-    const response = await fetch(url, {
-      method,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ title, content, excerpt }),
-    });
-    if (response.ok) {
+    try {
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ title, content, excerpt }),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to save post');
+      }
       router.push('/admin');
+    } catch (error) {
+      console.error('Error saving post:', error);
     }
   };
 
