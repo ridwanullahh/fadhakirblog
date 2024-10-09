@@ -1,13 +1,17 @@
-
-const db = require('./lib/db');
-
-async function testConnection() {
-  try {
-    const res = await db.query('SELECT * FROM "bseYTIApw5hBXcSbm9D"."blog_posts" LIMIT 1');
-    console.log('Connection successful:', res.rows);
-  } catch (err) {
-    console.error('Connection error:', err);
+const { Client } = require('pg');
+const client = new Client({
+  connectionString: process.env.DATABASE_URL_POSTGRES,
+  ssl: {
+    rejectUnauthorized: false
   }
-}
+});
 
-testConnection();
+client.connect()
+  .then(() => {
+    console.log('Connected to PostgreSQL');
+    client.end();
+  })
+  .catch(err => {
+    console.error('Connection error', err.stack);
+    client.end();
+  });
