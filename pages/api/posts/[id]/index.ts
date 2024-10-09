@@ -19,7 +19,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     } catch (error) {
       console.error('Error fetching post:', error);
-      console.error('Error details:', error.message);
+      console.error('Error stack:', error.stack);
+      console.error('Error details:', error);
       res.status(500).json({ error: 'Failed to fetch post' });
     }
   } else if (req.method === 'PUT') {
