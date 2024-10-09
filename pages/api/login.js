@@ -1,11 +1,11 @@
 
-import auth0 from '../../lib/auth0';
+import { getSession } from 'next-auth/react';
 
 export default async function login(req, res) {
-  try {
-    await auth0.handleLogin(req, res);
-  } catch (error) {
-    console.error(error);
-    res.status(error.status || 400).end(error.message);
+  const session = await getSession({ req });
+  if (session) {
+    res.status(200).json({ message: 'Already logged in' });
+  } else {
+    res.redirect('/api/auth/signin');
   }
 }
