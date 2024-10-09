@@ -6,30 +6,10 @@
   - Environments: .env
 
    Linting and checking validity of types ...
-   Creating an optimized production build ...
- ✓ Compiled successfully
-   Collecting page data ...
 
-> Build error occurred
-Error: Cannot find module '/home/user/fadhakirblog/.next/server/next-font-manifest.json'
-Require stack:
-- /home/user/fadhakirblog/node_modules/next/dist/export/index.js
-- /home/user/fadhakirblog/node_modules/next/dist/build/index.js
-- /home/user/fadhakirblog/node_modules/next/dist/cli/next-build.js
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
-    at /home/user/fadhakirblog/node_modules/next/dist/server/require-hook.js:55:36
-    at Module._load (node:internal/modules/cjs/loader:1051:27)
-    at Module.require (node:internal/modules/cjs/loader:1311:19)
-    at mod.require (/home/user/fadhakirblog/node_modules/next/dist/server/require-hook.js:65:28)
-    at require (node:internal/modules/helpers:179:18)
-    at exportAppImpl (/home/user/fadhakirblog/node_modules/next/dist/export/index.js:337:27)
-    at async /home/user/fadhakirblog/node_modules/next/dist/export/index.js:623:16
-    at async Span.traceAsyncFn (/home/user/fadhakirblog/node_modules/next/dist/trace/trace.js:154:20)
-    at async /home/user/fadhakirblog/node_modules/next/dist/build/index.js:1683:42 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [
-    '/home/user/fadhakirblog/node_modules/next/dist/export/index.js',
-    '/home/user/fadhakirblog/node_modules/next/dist/build/index.js',
-    '/home/user/fadhakirblog/node_modules/next/dist/cli/next-build.js'
-  ]
-}
+Failed to compile.
+
+./lib/nextauth.js
+3:8  Error: 'CredentialsProvider' is defined but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules

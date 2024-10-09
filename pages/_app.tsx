@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>
-    </UserProvider>
+    </SessionProvider>
   );
 }
 
