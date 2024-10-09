@@ -8,13 +8,13 @@
    Linting and checking validity of types ...
 Failed to compile.
 
-./pages/api/posts/[id]/index.ts:17:37
-Type error: 'error' is of type 'unknown'.
+./pages/api/posts/[id]/index.ts:26:28
+Type error: Cannot find name 'db'.
 
-[0m [90m 15 |[39m     } [36mcatch[39m (error) {[0m
-[0m [90m 16 |[39m       console[33m.[39merror([32m'Error fetching post:'[39m[33m,[39m error)[33m;[39m[0m
-[0m[31m[1m>[22m[39m[90m 17 |[39m       console[33m.[39merror([32m'Error stack:'[39m[33m,[39m error[33m.[39mstack)[33m;[39m[0m
-[0m [90m    |[39m                                     [31m[1m^[22m[39m[0m
-[0m [90m 18 |[39m       console[33m.[39merror([32m'Error details:'[39m[33m,[39m error)[33m;[39m[0m
-[0m [90m 19 |[39m       res[33m.[39mstatus([35m500[39m)[33m.[39mjson({ error[33m:[39m [32m'Failed to fetch post'[39m })[33m;[39m[0m
-[0m [90m 20 |[39m     }[0m
+[0m [90m 24 |[39m     [36mtry[39m {[0m
+[0m [90m 25 |[39m       [36mconst[39m { title[33m,[39m content[33m,[39m author[33m,[39m category[33m,[39m status[33m,[39m updated_at } [33m=[39m req[33m.[39mbody[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 26 |[39m       [36mconst[39m result [33m=[39m [36mawait[39m db[33m.[39mquery([0m
+[0m [90m    |[39m                            [31m[1m^[22m[39m[0m
+[0m [90m 27 |[39m         [32m'UPDATE posts SET title = $1, content = $2, author = $3, category = $4, status = $5, updated_at = $6 WHERE id = $7 RETURNING *'[39m[33m,[39m[0m
+[0m [90m 28 |[39m         [title[33m,[39m content[33m,[39m author[33m,[39m category[33m,[39m status[33m,[39m updated_at[33m,[39m id][0m
+[0m [90m 29 |[39m       )[33m;[39m[0m

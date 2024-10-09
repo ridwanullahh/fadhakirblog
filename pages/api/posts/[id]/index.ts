@@ -14,14 +14,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     } catch (error) {
       console.error('Error fetching post:', error);
-      console.error('Error stack:', error.stack);
+       if (error instanceof Error) {
+         console.error('Error stack:', error.stack);
+       }
       console.error('Error details:', error);
       res.status(500).json({ error: 'Failed to fetch post' });
     }
   } else if (req.method === 'PUT') {
     try {
       const { title, content, author, category, status, updated_at } = req.body;
-      const result = await db.query(
+       const result = await dbQuery(
         'UPDATE posts SET title = $1, content = $2, author = $3, category = $4, status = $5, updated_at = $6 WHERE id = $7 RETURNING *',
         [title, content, author, category, status, updated_at, id]
       );
