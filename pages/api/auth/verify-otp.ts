@@ -8,7 +8,7 @@ interface UserWithOTP {
   otp?: string;
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const verifyOtpHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   const session = await getSession({ req });
 
   if (!session || !session.user) {

@@ -5,7 +5,7 @@ const VerifyOTP = () => {
   const [otp, setOtp] = useState('');
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Verify OTP logic here
     const response = await fetch('/api/auth/verify-otp', {
