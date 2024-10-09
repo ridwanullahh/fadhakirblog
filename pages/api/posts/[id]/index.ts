@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.query;
   if (req.method === 'PUT') {
     try {
-      const { title, content, excerpt, author, category, status, updated_at } = req.body;
+      const { title, content, author, category, status, updated_at } = req.body;
       const result = await pool.query(
         'UPDATE posts SET title = $1, content = $2, author = $3, category = $4, status = $5, updated_at = $6 WHERE id = $7 RETURNING *',
         [title, content, author, category, status, updated_at, id]

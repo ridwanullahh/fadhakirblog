@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'DELETE') {
     try {
       const result = await pool.query('DELETE FROM posts WHERE id = $1 RETURNING *', [id]);
-      if (result.rowCount > 0) {
+      if (result.rowCount && result.rowCount > 0) {
         res.status(204).end();
       } else {
         res.status(404).json({ error: 'Post not found' });
