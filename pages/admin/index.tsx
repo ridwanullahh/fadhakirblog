@@ -61,7 +61,7 @@ const handleDelete = async (id: string) => {
               <CardTitle>{post.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{post.excerpt}</p>
+              <p>{post.excerpt || ''}</p>
               <div className="mt-4 flex space-x-4">
                 <Link href={`/admin/posts/edit/${post.id}`}>
                   <Button>Edit</Button>
