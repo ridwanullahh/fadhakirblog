@@ -1,28 +1,30 @@
 
 import { NextApiRequest, NextApiResponse } from 'next';
+import { Pool } from 'pg';
 
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL_POSTGRES,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (req.method === 'DELETE') {
     try {
-      const response = await fetch(`https://app.teable.io/api/table/${process.env.TEABLE_TABLE_ID}/record/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${process.env.TEABLE_API_TOKEN}`,
-        }
-      });
-      if (response.ok) {
+      const result = await pool.query('DELETE FROM posts WHERE id = $1 RETURNING *', [id]);
+      if (result.rowCount > 0) {
         res.status(204).end();
       } else {
-        const error = await response.json();
-        throw new Error(error.message);
+        res.status(404).json({ error: 'Post not found' });
       }
-      res.status(204).end();
-    } catch {
+    } catch (error) {
+      console.error('Error deleting post:', error);
       res.status(500).json({ error: 'Failed to delete post' });
     }
   } else {
     res.setHeader('Allow', ['DELETE']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

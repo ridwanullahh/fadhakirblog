@@ -1,13 +1,13 @@
 
 const teable = require('./lib/teable');
 
-async function testTeableConnection() {
+async function testXataConnection() {
   try {
-    const records = await teable.getRecords('tblwt4j33C0EwVySweN');
+    const records = await teable.getRecords();
     console.log('Records fetched successfully:', records);
   } catch (err) {
     console.error('Error fetching records:', err);
   }
 }
 
-testTeableConnection();
+testXataConnection();
