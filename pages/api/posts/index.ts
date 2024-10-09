@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } else if (req.method === 'POST') {
     try {
       const { title, content, author, category, status, created_at, updated_at } = req.body;
-      const result = await db.query(
+       const result = await dbQuery(
         'INSERT INTO posts (title, content, author, category, status, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
         [title, content, author, category, status, created_at, updated_at]
       );
