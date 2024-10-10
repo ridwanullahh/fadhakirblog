@@ -25,6 +25,7 @@ const [posts, setPosts] = useState<Post[]>([]);
         }
         const data = await response.json();
         console.log('Fetched posts data:', data, 'Type:', typeof data);
+        console.log('Fetched posts data:', JSON.stringify(data, null, 2));
         if (Array.isArray(data)) {
           setPosts(data);
         } else {

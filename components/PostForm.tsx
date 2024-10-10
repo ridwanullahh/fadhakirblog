@@ -43,7 +43,8 @@ const PostForm: React.FC<PostFormProps> = ({ post }) => {
         throw new Error('Failed to save post');
       }
       const data = await response.json();
-      console.log('Response data:', data, 'Type:', typeof data);
+        console.log('Response data:', data, 'Type:', typeof data);
+        console.log('Response data:', JSON.stringify(data, null, 2));
       if (data && data.id) {
         router.push('/admin');
       } else {
