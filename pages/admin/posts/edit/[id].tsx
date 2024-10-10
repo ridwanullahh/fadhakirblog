@@ -27,4 +27,6 @@ const EditPostPage = () => {
   return <PostForm post={post} />;
 };
 
-export default EditPostPage;
+import withAuth from '../../../../lib/withAuth';
+
+export default withAuth(EditPostPage);
