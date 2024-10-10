@@ -53,8 +53,10 @@ https://next-auth.js.org/errors#client_fetch_error fetch failed {
   message: 'fetch failed'
 }
 TypeError: r.writeHead is not a function
-    at /home/user/fadhakirblog/.next/server/pages/admin/posts/create.js:1:6663
+    at /home/user/fadhakirblog/.next/server/pages/admin/posts/create.js:1:6741
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+   Generating static pages (2/11) 
+   Generating static pages (5/11) 
 Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
     at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
     at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
@@ -93,10 +95,8 @@ https://next-auth.js.org/errors#client_fetch_error fetch failed {
   message: 'fetch failed'
 }
 TypeError: r.writeHead is not a function
-    at /home/user/fadhakirblog/.next/server/pages/admin/posts/create.js:1:6663
+    at /home/user/fadhakirblog/.next/server/pages/admin/posts/create.js:1:6741
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-   Generating static pages (2/11) 
-   Generating static pages (5/11) 
    Generating static pages (8/11) 
  ✓ Generating static pages (11/11)
 
