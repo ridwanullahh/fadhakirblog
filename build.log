@@ -2,11 +2,6 @@
 > web-app@0.1.0 build
 > next build
 
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
   ▲ Next.js 14.2.13
   - Environments: .env
 
@@ -15,48 +10,6 @@ https://nextjs.org/telemetry
  ✓ Compiled successfully
    Collecting page data ...
    Generating static pages (0/11) ...
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-
-Error occurred prerendering page "/admin". Read more: https://nextjs.org/docs/messages/prerender-error
-
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-[next-auth][error][CLIENT_FETCH_ERROR] 
-https://next-auth.js.org/errors#client_fetch_error fetch failed {
-  error: {
-    message: 'fetch failed',
-    stack: 'TypeError: fetch failed\n' +
-      '    at node:internal/deps/undici/undici:13178:13\n' +
-      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-    name: 'TypeError'
-  },
-  url: 'http://localhost:3000/api/auth/session',
-  message: 'fetch failed'
-}
-TypeError: r.writeHead is not a function
-    at /home/user/fadhakirblog/.next/server/pages/admin/posts/create.js:1:6741
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-   Generating static pages (2/11) 
-   Generating static pages (5/11) 
 Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
     at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
     at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
@@ -82,21 +35,33 @@ Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.ht
     at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
     at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
     at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-[next-auth][error][CLIENT_FETCH_ERROR] 
-https://next-auth.js.org/errors#client_fetch_error fetch failed {
-  error: {
-    message: 'fetch failed',
-    stack: 'TypeError: fetch failed\n' +
-      '    at node:internal/deps/undici/undici:13178:13\n' +
-      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-    name: 'TypeError'
-  },
-  url: 'http://localhost:3000/api/auth/session',
-  message: 'fetch failed'
-}
-TypeError: r.writeHead is not a function
-    at /home/user/fadhakirblog/.next/server/pages/admin/posts/create.js:1:6741
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+
+Error occurred prerendering page "/admin". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
+    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+   Generating static pages (2/11) 
+   Generating static pages (5/11) 
    Generating static pages (8/11) 
  ✓ Generating static pages (11/11)
 

@@ -24,6 +24,7 @@ const [posts, setPosts] = useState<Post[]>([]);
           throw new Error('Failed to fetch posts');
         }
         const data = await response.json();
+        console.log('Fetched posts data:', data, 'Type:', typeof data);
         if (Array.isArray(data)) {
           setPosts(data);
         } else {
@@ -33,9 +34,10 @@ const [posts, setPosts] = useState<Post[]>([]);
         console.error('Error fetching posts:', error);
       }
     };
+    console.log('Posts state:', posts);
 
     fetchPosts();
-  }, []);
+  }, [posts]);
 
 const handleDelete = async (id: string) => {
     const response = await fetch(`/api/posts/${id}/delete`, {
