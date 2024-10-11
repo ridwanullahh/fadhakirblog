@@ -3,17 +3,134 @@
 > next dev
 
  ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
   ▲ Next.js 14.2.13
-  - Local:        http://localhost:3001
+  - Local:        http://localhost:3002
   - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 1602ms
+ ✓ Ready in 2s
  ○ Compiling / ...
- ✓ Compiled / in 3.5s (374 modules)
- ✓ Compiled in 291ms (374 modules)
- HEAD / 200 in 3962ms
- ✓ Compiled in 273ms (245 modules)
- ✓ Compiled in 241ms (245 modules)
- ✓ Compiled in 209ms (245 modules)
- ✓ Compiled in 245ms (245 modules)
+ ✓ Compiled / in 3.4s (374 modules)
+ ✓ Compiled in 280ms (374 modules)
+ HEAD / 200 in 3881ms
+ ✓ Compiled /admin in 285ms (382 modules)
+Error: Objects are not valid as a React child (found: [object Promise]). If you meant to render a collection of children, use an array instead.
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6190:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderNode (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6270:12)
+    at renderHostElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5642:3)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5963:5)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderContextProvider (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5931:3)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6028:11)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+ ⨯ Error: Objects are not valid as a React child (found: [object Promise]). If you meant to render a collection of children, use an array instead.
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6190:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderIndeterminateComponent (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5786:7)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderNode (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6270:12)
+    at renderHostElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5642:3)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5963:5)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14)
+    at renderContextProvider (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:5931:3)
+    at renderElement (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6028:11)
+    at renderNodeDestructiveImpl (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.development.js:6087:14) {
+  page: '/admin'
+}
+ ✓ Compiled /_error in 115ms (384 modules)
+ HEAD /admin 500 in 560ms
+[next-auth][error][CLIENT_FETCH_ERROR] 
+https://next-auth.js.org/errors#client_fetch_error Unexpected token '<', "<!DOCTYPE "... is not valid JSON {
+  error: {
+    message: `Unexpected token '<', "<!DOCTYPE "... is not valid JSON`,
+    stack: `SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON\n` +
+      '    at JSON.parse (<anonymous>)\n' +
+      '    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)\n' +
+      '    at successSteps (node:internal/deps/undici/undici:5454:27)\n' +
+      '    at fullyReadBody (node:internal/deps/undici/undici:4381:9)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+      '    at async consumeBody (node:internal/deps/undici/undici:5463:7)',
+    name: 'SyntaxError'
+  },
+  url: 'http://localhost:3000/api/auth/session',
+  message: `Unexpected token '<', "<!DOCTYPE "... is not valid JSON`
+}
+TypeError: res.writeHead is not a function
+    at eval (webpack-internal:///./lib/withAuth.js:14:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[next-auth][error][CLIENT_FETCH_ERROR] 
+https://next-auth.js.org/errors#client_fetch_error Unexpected token '<', "<!DOCTYPE "... is not valid JSON {
+  error: {
+    message: `Unexpected token '<', "<!DOCTYPE "... is not valid JSON`,
+    stack: `SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON\n` +
+      '    at JSON.parse (<anonymous>)\n' +
+      '    at parseJSONFromBytes (node:internal/deps/undici/undici:5472:19)\n' +
+      '    at successSteps (node:internal/deps/undici/undici:5454:27)\n' +
+      '    at fullyReadBody (node:internal/deps/undici/undici:4381:9)\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+      '    at async consumeBody (node:internal/deps/undici/undici:5463:7)',
+    name: 'SyntaxError'
+  },
+  url: 'http://localhost:3000/api/auth/session',
+  message: `Unexpected token '<', "<!DOCTYPE "... is not valid JSON`
+}
+TypeError: Cannot read properties of undefined (reading 'writeHead')
+    at eval (webpack-internal:///./lib/withAuth.js:14:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ ⨯ lib/withAuth.js (8:11) @ writeHead
+ ⨯ unhandledRejection: TypeError: res.writeHead is not a function
+    at eval (webpack-internal:///./lib/withAuth.js:14:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[0m [90m  6 |[39m     [36mconst[39m session [33m=[39m [36mawait[39m getSession({ req })[33m;[39m[0m
+[0m [90m  7 |[39m     [36mif[39m ([33m![39msession [33m||[39m [33m![39msession[33m.[39muser [33m||[39m session[33m.[39muser[33m.[39mrole [33m!==[39m [32m'admin'[39m) {[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m       res[33m.[39mwriteHead([35m302[39m[33m,[39m { [33mLocation[39m[33m:[39m [32m'/api/auth/signin'[39m })[33m;[39m[0m
+[0m [90m    |[39m           [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m       res[33m.[39mend()[33m;[39m[0m
+[0m [90m 10 |[39m       [36mreturn[39m[33m;[39m[0m
+[0m [90m 11 |[39m     }[0m
+ ⨯ lib/withAuth.js (8:11) @ writeHead
+ ⨯ unhandledRejection: TypeError: res.writeHead is not a function
+    at eval (webpack-internal:///./lib/withAuth.js:14:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[0m [90m  6 |[39m     [36mconst[39m session [33m=[39m [36mawait[39m getSession({ req })[33m;[39m[0m
+[0m [90m  7 |[39m     [36mif[39m ([33m![39msession [33m||[39m [33m![39msession[33m.[39muser [33m||[39m session[33m.[39muser[33m.[39mrole [33m!==[39m [32m'admin'[39m) {[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m       res[33m.[39mwriteHead([35m302[39m[33m,[39m { [33mLocation[39m[33m:[39m [32m'/api/auth/signin'[39m })[33m;[39m[0m
+[0m [90m    |[39m           [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m       res[33m.[39mend()[33m;[39m[0m
+[0m [90m 10 |[39m       [36mreturn[39m[33m;[39m[0m
+[0m [90m 11 |[39m     }[0m
+ ⨯ lib/withAuth.js (8:11) @ writeHead
+ ⨯ unhandledRejection: TypeError: Cannot read properties of undefined (reading 'writeHead')
+    at eval (webpack-internal:///./lib/withAuth.js:14:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[0m [90m  6 |[39m     [36mconst[39m session [33m=[39m [36mawait[39m getSession({ req })[33m;[39m[0m
+[0m [90m  7 |[39m     [36mif[39m ([33m![39msession [33m||[39m [33m![39msession[33m.[39muser [33m||[39m session[33m.[39muser[33m.[39mrole [33m!==[39m [32m'admin'[39m) {[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m       res[33m.[39mwriteHead([35m302[39m[33m,[39m { [33mLocation[39m[33m:[39m [32m'/api/auth/signin'[39m })[33m;[39m[0m
+[0m [90m    |[39m           [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m       res[33m.[39mend()[33m;[39m[0m
+[0m [90m 10 |[39m       [36mreturn[39m[33m;[39m[0m
+[0m [90m 11 |[39m     }[0m
+ ⨯ lib/withAuth.js (8:11) @ writeHead
+ ⨯ unhandledRejection: TypeError: Cannot read properties of undefined (reading 'writeHead')
+    at eval (webpack-internal:///./lib/withAuth.js:14:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[0m [90m  6 |[39m     [36mconst[39m session [33m=[39m [36mawait[39m getSession({ req })[33m;[39m[0m
+[0m [90m  7 |[39m     [36mif[39m ([33m![39msession [33m||[39m [33m![39msession[33m.[39muser [33m||[39m session[33m.[39muser[33m.[39mrole [33m!==[39m [32m'admin'[39m) {[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m       res[33m.[39mwriteHead([35m302[39m[33m,[39m { [33mLocation[39m[33m:[39m [32m'/api/auth/signin'[39m })[33m;[39m[0m
+[0m [90m    |[39m           [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m       res[33m.[39mend()[33m;[39m[0m
+[0m [90m 10 |[39m       [36mreturn[39m[33m;[39m[0m
+[0m [90m 11 |[39m     }[0m
+ ✓ Compiled in 605ms (426 modules)

@@ -9,8 +9,8 @@ const EditPostPage = () => {
   interface EditPost {
     id?: string;
     title: string;
-    excerpt?: string;
-    content?: string;
+    excerpt: string;
+    content: string;
     category?: string;
     status?: string;
     tags?: string[];

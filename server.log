@@ -13,3 +13,46 @@ You can learn more, including how to opt-out if you'd not like to participate in
 https://nextjs.org/telemetry
 
  ✓ Ready in 1616ms
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 623ms (74 modules)
+ ⨯ TypeError: options.providers is not iterable
+    at assertConfig (/home/user/fadhakirblog/node_modules/next-auth/core/lib/assert.js:51:34)
+    at AuthHandler (/home/user/fadhakirblog/node_modules/next-auth/core/index.js:59:52)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NextAuthApiHandler (/home/user/fadhakirblog/node_modules/next-auth/next/index.js:18:19)
+    at async NextAuth._args$ (/home/user/fadhakirblog/node_modules/next-auth/next/index.js:91:14)
+    at async K (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:598:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/home/user/fadhakirblog/node_modules/next/dist/server/base-server.js:810:17)
+    at async /home/user/fadhakirblog/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/user/fadhakirblog/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/user/fadhakirblog/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:350:24) {
+  page: '/api/auth/[...nextauth]'
+}
+ ⨯ TypeError: options.providers is not iterable
+    at assertConfig (/home/user/fadhakirblog/node_modules/next-auth/core/lib/assert.js:51:34)
+    at AuthHandler (/home/user/fadhakirblog/node_modules/next-auth/core/index.js:59:52)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NextAuthApiHandler (/home/user/fadhakirblog/node_modules/next-auth/next/index.js:18:19)
+    at async NextAuth._args$ (/home/user/fadhakirblog/node_modules/next-auth/next/index.js:91:14)
+    at async K (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:2871)
+    at async U.render (/home/user/fadhakirblog/node_modules/next/dist/compiled/next-server/pages-api.runtime.dev.js:21:3955)
+    at async DevServer.runApi (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:598:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/user/fadhakirblog/node_modules/next/dist/server/next-server.js:269:37)
+    at async DevServer.handleRequestImpl (/home/user/fadhakirblog/node_modules/next/dist/server/base-server.js:810:17)
+    at async /home/user/fadhakirblog/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/user/fadhakirblog/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/user/fadhakirblog/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/user/fadhakirblog/node_modules/next/dist/server/lib/router-server.js:350:24) {
+  page: '/api/auth/[...nextauth]'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1774ms (321 modules)
+ GET /api/auth/session 500 in 1992ms
+ GET /api/auth/session 500 in 1992ms
+ ✓ Compiled in 237ms (246 modules)
