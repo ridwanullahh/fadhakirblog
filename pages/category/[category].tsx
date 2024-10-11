@@ -18,7 +18,11 @@ const [posts, setPosts] = useState<Post[]>([]);
     if (category) {
       const fetchPosts = async () => {
         // Simulate an API call to fetch posts by category
+        console.log('Fetching posts for category:', category);
         const response = await fetch(`/api/posts?category=${category}`);
+        console.log('Response status:', response.status);
+        const data = await response.json();
+        console.log('Fetched posts data:', data);
         const data = await response.json();
         setPosts(data);
       };
