@@ -6,7 +6,7 @@ import PostForm from '@/components/PostForm';
 const EditPostPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  interface Post {
+  interface EditPost {
     id?: string;
     title?: string;
     excerpt?: string;
@@ -19,7 +19,7 @@ const EditPostPage = () => {
     error?: string;
   }
 
-  const [post, setPost] = useState<Post | null>(null);
+  const [post, setPost] = useState<EditPost | null>(null);
 
   useEffect(() => {
     if (id) {

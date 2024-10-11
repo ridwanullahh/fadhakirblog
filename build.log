@@ -9,7 +9,7 @@
 Failed to compile.
 
 ./pages/admin/posts/edit/[id].tsx:44:20
-Type error: Type 'Post' is not assignable to type 'Post'. Two different types with this name exist, but they are unrelated.
+Type error: Type 'EditPost' is not assignable to type 'Post'.
   Types of property 'title' are incompatible.
     Type 'string | undefined' is not assignable to type 'string'.
       Type 'undefined' is not assignable to type 'string'.
