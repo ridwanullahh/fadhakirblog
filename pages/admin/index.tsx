@@ -19,7 +19,7 @@ const [posts, setPosts] = useState<Post[]>([]);
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('/api/posts');
+        const response = await fetch('/api/posts?category=all');
         if (!response.ok) {
           throw new Error('Failed to fetch posts');
         }
