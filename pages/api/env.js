@@ -1,7 +1,5 @@
 
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req, res) {
   res.status(200).json({
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     EMAIL_USER: process.env.EMAIL_USER,
