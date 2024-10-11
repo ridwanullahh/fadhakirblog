@@ -6,91 +6,10 @@
   - Environments: .env
 
    Linting and checking validity of types ...
-   Creating an optimized production build ...
- ✓ Compiled successfully
-   Collecting page data ...
-   Generating static pages (0/12) ...
-   Generating static pages (3/12) 
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
 
-Error occurred prerendering page "/admin/posts/create". Read more: https://nextjs.org/docs/messages/prerender-error
+Failed to compile.
 
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-   Generating static pages (6/12) 
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+./lib/withAuth.js
+2:10  Error: 'getSession' is defined but never used.  @typescript-eslint/no-unused-vars
 
-Error occurred prerendering page "/admin". Read more: https://nextjs.org/docs/messages/prerender-error
-
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-   Generating static pages (9/12) 
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-
-Error occurred prerendering page "/admin/posts/edit/[id]". Read more: https://nextjs.org/docs/messages/prerender-error
-
-Error: Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=%5Bobject%20Promise%5D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:490)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at $c (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:74:209)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
-    at Zc (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:481)
-    at Z (/home/user/fadhakirblog/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
- ✓ Generating static pages (12/12)
-
-> Export encountered errors on following paths:
-	/admin
-	/admin/posts/create
-	/admin/posts/edit/[id]
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
