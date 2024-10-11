@@ -2,8 +2,17 @@
 > web-app@0.1.0 dev
 > next dev
 
- ⚠ Port 3000 is in use, trying 3001 instead.
   ▲ Next.js 14.2.13
-  - Local:        http://localhost:3001
-  - Environme ○ Compiling /api/auth/[...nextauth] ...
- ✓ Compiled /api/auth/[...nextauth] in 624ms (74 modules)
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1549ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 3.7s (299 modules)
+ HEAD /signin 404 in 3843ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 972ms (396 modules)
+ HEAD /admin 200 in 826ms
+ ✓ Compiled /auth/signin in 288ms (400 modules)
+ HEAD /auth/signin 200 in 322ms

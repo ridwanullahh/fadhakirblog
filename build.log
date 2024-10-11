@@ -6,10 +6,43 @@
   - Environments: .env
 
    Linting and checking validity of types ...
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Collecting page data ...
+PageNotFoundError: Cannot find module for page: /auth/verify-otp
+    at getPagePath (/home/user/fadhakirblog/node_modules/next/dist/server/require.js:94:15)
+    at requirePage (/home/user/fadhakirblog/node_modules/next/dist/server/require.js:99:22)
+    at /home/user/fadhakirblog/node_modules/next/dist/server/load-components.js:98:84
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loadComponentsImpl (/home/user/fadhakirblog/node_modules/next/dist/server/load-components.js:98:26)
+    at async /home/user/fadhakirblog/node_modules/next/dist/build/utils.js:1116:32
+    at async Span.traceAsyncFn (/home/user/fadhakirblog/node_modules/next/dist/trace/trace.js:154:20) {
+  code: 'ENOENT'
+}
 
-Failed to compile.
+> Build error occurred
+Error: Failed to collect page data for /auth/verify-otp
+    at /home/user/fadhakirblog/node_modules/next/dist/build/utils.js:1268:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  type: 'Error'
+}
+ext/dist/trace/trace.js:154:20) {
+  code: 'ENOENT'
+}
+PageNotFoundError: Cannot find module for page: /auth/signin
+    at getPagePath (/home/user/fadhakirblog/node_modules/next/dist/server/require.js:94:15)
+    at requirePage (/home/user/fadhakirblog/node_modules/next/dist/server/require.js:99:22)
+    at /home/user/fadhakirblog/node_modules/next/dist/server/load-components.js:98:84
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async loadComponentsImpl (/home/user/fadhakirblog/node_modules/next/dist/server/load-components.js:98:26)
+    at async /home/user/fadhakirblog/node_modules/next/dist/build/utils.js:1116:32
+    at async Span.traceAsyncFn (/home/user/fadhakirblog/node_modules/next/dist/trace/trace.js:154:20) {
+  code: 'ENOENT'
+}
 
-./lib/withAuth.js
-2:10  Error: 'getSession' is defined but never used.  @typescript-eslint/no-unused-vars
-
-info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+> Build error occurred
+Error: Failed to collect page data for /posts
+    at /home/user/fadhakirblog/node_modules/next/dist/build/utils.js:1268:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  type: 'Error'
+}
