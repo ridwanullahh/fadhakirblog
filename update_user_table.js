@@ -1,22 +1,14 @@
+
 const { Client } = require('pg');
+
 const client = new Client({
-  connectionString: process.env.DATABASE_URL_POSTGRES,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  connectionString: 'postgresql://l3o06d:xau_652JC3hVSqIPnH6IVaJerJcLK3ctQaPu1@us-east-1.sql.xata.sh/fadhakir:main?sslmode=require',
 });
 
-client.connect();
+async function updateTable() {
+  await client.connect();
+  await client.query('ALTER TABLE users ADD COLUMN IF NOT EXISTS otp VARCHAR(6);');
+  await client.end();
+}
 
-const updateTable = async () => {
-  try {
-    await client.query('ALTER TABLE users ADD COLUMN otp VARCHAR(6)');
-    console.log('User table updated successfully.');
-  } catch (err) {
-    console.error('Error updating user table:', err);
-  } finally {
-    client.end();
-  }
-};
-
-updateTable();
+updateTable().catch(err => console.error('Error updating user table:', err));

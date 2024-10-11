@@ -4,16 +4,31 @@ import { signIn } from 'next-auth/react';
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [otp, setOtp] = useState('');
+  const [showOtpInput, setShowOtpInput] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const result = await signIn('credentials', {
-      redirect: false,
-      email,
-      password,
-    });
-    if (result.error) {
-      console.error('Sign-in error:', result.error);
+    if (!showOtpInput) {
+      const result = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+      });
+      if (result.error) {
+        console.error('Sign-in error:', result.error);
+      } else {
+        setShowOtpInput(true);
+      }
+    } else {
+      const result = await signIn('otp', {
+        redirect: false,
+        email,
+        otp,
+      });
+      if (result.error) {
+        console.error('OTP verification error:', result.error);
+      }
     }
   };
 
@@ -33,7 +48,15 @@ const SignIn = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
-        <button type="submit">Sign In</button>
+         {showOtpInput && (
+           <input
+             type="text"
+             value={otp}
+             onChange={(e) => setOtp(e.target.value)}
+             placeholder="OTP"
+           />
+         )}
+         <button type="submit">{showOtpInput ? 'Verify OTP' : 'Sign In'}</button>
       </form>
     </div>
   );
