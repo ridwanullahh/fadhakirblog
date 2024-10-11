@@ -7,7 +7,14 @@ const SignIn = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    await signIn('credentials', { email, password });
+    const result = await signIn('credentials', {
+      redirect: false,
+      email,
+      password,
+    });
+    if (result.error) {
+      console.error('Sign-in error:', result.error);
+    }
   };
 
   return (
