@@ -36,6 +36,7 @@ const [posts, setPosts] = useState<Post[]>([]);
       }
     };
     console.log('Posts state:', posts);
+    console.log('Fetching posts...');
 
     fetchPosts();
   // eslint-disable-next-line react-hooks/exhaustive-deps
