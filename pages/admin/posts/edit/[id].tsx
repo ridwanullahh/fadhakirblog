@@ -8,7 +8,7 @@ const EditPostPage = () => {
   const { id } = router.query;
   interface EditPost {
     id?: string;
-    title?: string;
+    title: string;
     excerpt?: string;
     content?: string;
     category?: string;
