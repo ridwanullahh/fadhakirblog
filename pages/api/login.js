@@ -6,6 +6,6 @@ export default async function login(req, res) {
   if (session) {
     res.status(200).json({ message: 'Already logged in' });
   } else {
-    res.redirect('/api/auth/signin');
+    res.redirect('/auth/signin');
   }
 }
