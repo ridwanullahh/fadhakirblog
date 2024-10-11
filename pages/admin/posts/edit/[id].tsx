@@ -10,6 +10,12 @@ const EditPostPage = () => {
     id?: string;
     title?: string;
     excerpt?: string;
+    content?: string;
+    category?: string;
+    status?: string;
+    tags?: string[];
+    createdAt?: string;
+    updatedAt?: string;
     error?: string;
   }
 

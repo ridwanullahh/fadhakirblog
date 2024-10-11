@@ -8,13 +8,16 @@
    Linting and checking validity of types ...
 Failed to compile.
 
-./pages/admin/posts/edit/[id].tsx:38:20
-Type error: Property 'content' is missing in type 'Post' but required in type 'Post'.
+./pages/admin/posts/edit/[id].tsx:44:20
+Type error: Type 'Post' is not assignable to type 'Post'. Two different types with this name exist, but they are unrelated.
+  Types of property 'title' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
 
-[0m [90m 36 |[39m   }[0m
-[0m [90m 37 |[39m[0m
-[0m[31m[1m>[22m[39m[90m 38 |[39m   [36mreturn[39m [33m<[39m[33mPostForm[39m post[33m=[39m{post} [33m/[39m[33m>[39m[33m;[39m[0m
+[0m [90m 42 |[39m   }[0m
+[0m [90m 43 |[39m[0m
+[0m[31m[1m>[22m[39m[90m 44 |[39m   [36mreturn[39m [33m<[39m[33mPostForm[39m post[33m=[39m{post} [33m/[39m[33m>[39m[33m;[39m[0m
 [0m [90m    |[39m                    [31m[1m^[22m[39m[0m
-[0m [90m 39 |[39m }[33m;[39m[0m
-[0m [90m 40 |[39m[0m
-[0m [90m 41 |[39m [36mimport[39m withAuth [36mfrom[39m [32m'../../../../lib/withAuth'[39m[33m;[39m[0m
+[0m [90m 45 |[39m }[33m;[39m[0m
+[0m [90m 46 |[39m[0m
+[0m [90m 47 |[39m [36mimport[39m withAuth [36mfrom[39m [32m'../../../../lib/withAuth'[39m[33m;[39m[0m
