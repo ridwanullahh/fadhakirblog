@@ -6,7 +6,14 @@ import PostForm from '@/components/PostForm';
 const EditPostPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const [post, setPost] = useState(null);
+  interface Post {
+    id?: string;
+    title?: string;
+    excerpt?: string;
+    error?: string;
+  }
+
+  const [post, setPost] = useState<Post | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -22,6 +29,10 @@ const EditPostPage = () => {
 
   if (!post) {
     return <div>Loading...</div>;
+  }
+
+  if (typeof post === 'object' && post !== null && 'error' in post) {
+    return <div>Error loading post: {post.error}</div>;
   }
 
   return <PostForm post={post} />;

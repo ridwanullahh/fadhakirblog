@@ -38,7 +38,8 @@ const [posts, setPosts] = useState<Post[]>([]);
     console.log('Posts state:', posts);
 
     fetchPosts();
-  }, [posts]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
 const handleDelete = async (id: string) => {
     const response = await fetch(`/api/posts/${id}/delete`, {
