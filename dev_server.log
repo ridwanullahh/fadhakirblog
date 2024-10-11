@@ -3,19 +3,18 @@
 > next dev
 
  ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
+ ⚠ Port 3002 is in use, trying 3003 instead.
+ ⚠ Port 3003 is in use, trying 3004 instead.
+ ⚠ Port 3004 is in use, trying 3005 instead.
+ ⚠ Port 3005 is in use, trying 3006 instead.
   ▲ Next.js 14.2.13
-  - Local:        http://localhost:3001
+  - Local:        http://localhost:3006
   - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 1611ms
+ ✓ Ready in 1696ms
  ○ Compiling /auth/signin ...
- ✓ Compiled /auth/signin in 3.4s (301 modules)
- ✓ Compiled in 315ms (301 modules)
- HEAD /auth/signin 200 in 3884ms
- ○ Compiling /admin ...
- ✓ Compiled /admin in 2.9s (398 modules)
- HEAD /admin 200 in 2980ms
- ✓ Compiled in 375ms (398 modules)
- ✓ Compiled in 236ms (398 modules)
- ✓ Compiled in 236ms (398 modules)
+ ✓ Compiled /auth/signin in 1855ms (301 modules)
+ ✓ Compiled in 324ms (301 modules)
+ HEAD /auth/signin 200 in 2320ms
